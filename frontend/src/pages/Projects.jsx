@@ -18,21 +18,14 @@ export default function Projects() {
     };
 
     const filteredProjects =
-        sort?.value === "all"
+        sort === "all"
             ? projectDetails
             : projectDetails.filter((project) => project.projecttag === sort.value);
-
-
-    const searchSuggestions = projectDetails.filter(project => project.prName.toLowerCase().trim().includes(search.toLowerCase()));
 
     return (
         <section className="mt-5">
             <div className="flex items-center mb-6">
                 <h3 className="text-5xl">Projects</h3>
-                <Select value={sort}
-                    defaultValue={options[0]}
-                    onChange={handleChange}
-                    className="w-40 ml-5 mt-2" options={options} />
             </div>
 
             <div className="search">
@@ -48,12 +41,7 @@ export default function Projects() {
             <div>
                 {filteredProjects.map((project, i) => (
                     <div key={i} className="grid grid-cols-2 gap-4 mt-5">
-                        <img
-                            className="w-full shadow-md hover:scale-105 transition"
-                            src={project.image}
-                            alt="swiggyClone"
-                            onClick={() => setImage(project.image)}
-                        />
+                        {console.log(project)}
                         <img
                             className="w-full shadow-md hover:scale-105 transition"
                             src={project.image}
