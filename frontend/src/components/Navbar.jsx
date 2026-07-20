@@ -6,7 +6,7 @@ export default function Navbar() {
     return (
         <header className="shadow-sm">
             <nav className="flex h-20">
-                <Link to='/' className="text-2xl ml-5">Introduction</Link>
+                <Link to='/' className="text-2xl ml-5">Dixit Ahir</Link>
                 <ul className="flex gap-12 text-2xl ml-auto mr-25">
                     <NavLink className={({ isActive }) =>
                         isActive ? 'bg-gray-400' : ''}

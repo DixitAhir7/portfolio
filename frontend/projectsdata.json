@@ -1,10 +1,10 @@
 [
     {
         "prName": "swiggy clone",
-        "image": "./public/images/image.png"
+        "image": "/images/image.png"
     },
     {
         "prName": "moving lift",
-        "image": "./public/images/Screenshot 2025-09-01 123208.png"
+        "image": "/images/Screenshot 2025-09-01 123208.png"
     }
 ]

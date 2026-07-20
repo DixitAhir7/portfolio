@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Select from 'react-select';
 import projectDetails from '../../projectsdata.json';
+import '../styles/pr.css'
 
 export default function Projects() {
 
@@ -13,7 +14,8 @@ export default function Projects() {
     const [bigImage, setImage] = useState('');
     const [search, setSearch] = useState('');
 
-    const handleChange = (option) => {
+    const handleChange = (e, option) => {
+        setSearch(e.target.value)
         setSort(option);
     };
 
@@ -21,6 +23,12 @@ export default function Projects() {
         sort === "all"
             ? projectDetails
             : projectDetails.filter((project) => project.projecttag === sort.value);
+
+    const [liftPosition, setLiftPosition] = useState(0);
+
+    const moveLift = (position) => {
+        setLiftPosition(position);
+    };
 
     return (
         <section className="mt-5">
@@ -30,7 +38,7 @@ export default function Projects() {
 
             <div className="search">
                 <input
-                    onChange={(e) => setSearch(e.target.value)}
+                    onChange={(e) => handleChange(e.target.value, search)}
                     value={search}
                     type="search"
                     name="projectsearch"
@@ -41,7 +49,6 @@ export default function Projects() {
             <div>
                 {filteredProjects.map((project, i) => (
                     <div key={i} className="grid grid-cols-2 gap-4 mt-5">
-                        {console.log(project)}
                         <img
                             className="w-full shadow-md hover:scale-105 transition"
                             src={project.image}
@@ -51,19 +58,51 @@ export default function Projects() {
                     </div>
                 ))}
 
-                {bigImage && (
-                    <div
-                        className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50"
-                        onClick={() => setImage(null)}
-                    >
-                        <img
-                            src={bigImage}
-                            alt="enlarged"
-                            className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-xl"
-                        />
-                    </div>
-                )}
 
+                {bigImage && (
+                    bigImage.startsWith("/images/Screenshot 2025-09-01 123208.png") ? (
+                        <div className='fixed inset-0 bg-black/60 flex items-center justify-center z-50'>
+                            <span onClick={() => setImage(null)}>x</span>
+                            <div className="building">
+                                <div
+                                    className="lift"
+                                    style={{ bottom: `${liftPosition}px` }}
+                                />
+                            </div>
+
+                            <div className="controls">
+                                <button onClick={() => setLiftPosition(0)}>
+                                    Ground Floor
+                                </button>
+
+                                <button onClick={() => setLiftPosition(100)}>
+                                    1st Floor
+                                </button>
+
+                                <button onClick={() => setLiftPosition(200)}>
+                                    2nd Floor
+                                </button>
+
+                                <button onClick={() => setLiftPosition(300)}>
+                                    3rd Floor
+                                </button>
+                            </div>
+
+                        </div>
+                    ) : (
+                        <div
+                            className="fixed inset-0 bg-black/60 flex items-center justify-center z-50"
+                            onClick={() => setImage(null)}
+                        >
+                            <img
+                                src={bigImage}
+                                alt="enlarged"
+                                className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-xl"
+                                onClick={(e) => e.stopPropagation()}
+                            />
+                        </div>
+                    )
+                )}
             </div>
         </section>
     );
