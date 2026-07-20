@@ -61,34 +61,36 @@ export default function Projects() {
 
                 {bigImage && (
                     bigImage.startsWith("/images/Screenshot 2025-09-01 123208.png") ? (
-                        <div className='fixed inset-0 bg-black/60 flex items-center justify-center z-50'>
-                            <span onClick={() => setImage(null)}>x</span>
-                            <div className="building">
-                                <div
-                                    className="lift"
-                                    style={{ bottom: `${liftPosition}px` }}
-                                />
+                        <>
+                            <div className='fixed inset-0 bg-black/60 flex items-center justify-center z-50'>
+                                <span className='text-2xl text-white' onClick={() => setImage(null)}>x</span>
+                                <div className="building">
+                                    <div
+                                        className="lift"
+                                        style={{ bottom: `${liftPosition}px` }}
+                                    />
+                                </div>
+
+                                <div className="controls">
+                                    <button className='text-white' onClick={() => setLiftPosition(0)}>
+                                        Ground Floor
+                                    </button>
+
+                                    <button className='text-white' onClick={() => setLiftPosition(100)}>
+                                        1st Floor
+                                    </button>
+
+                                    <button className='text-white' onClick={() => setLiftPosition(200)}>
+                                        2nd Floor
+                                    </button>
+
+                                    <button className='text-white' onClick={() => setLiftPosition(300)}>
+                                        3rd Floor
+                                    </button>
+                                </div>
+
                             </div>
-
-                            <div className="controls">
-                                <button onClick={() => setLiftPosition(0)}>
-                                    Ground Floor
-                                </button>
-
-                                <button onClick={() => setLiftPosition(100)}>
-                                    1st Floor
-                                </button>
-
-                                <button onClick={() => setLiftPosition(200)}>
-                                    2nd Floor
-                                </button>
-
-                                <button onClick={() => setLiftPosition(300)}>
-                                    3rd Floor
-                                </button>
-                            </div>
-
-                        </div>
+                        </>
                     ) : (
                         <div
                             className="fixed inset-0 bg-black/60 flex items-center justify-center z-50"

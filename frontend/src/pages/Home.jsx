@@ -5,7 +5,7 @@ export default function Home() {
     return (
         <>
             <section className="flex flex-row items-center">
-                <img src="public/images/WhatsApp Image 2025-07-12 at 22.02.01_418d642f.jpg" alt="adminimg" className="w-100 h-100 object-cover hover:scale-105 hover:brightness-110 transition-transform duration-300 ease-in-out" />
+                <img src="/images/WhatsApp Image 2025-07-12 at 22.02.01_418d642f.jpg" alt="adminimg" className="w-100 h-100 object-cover hover:scale-105 hover:brightness-110 transition-transform duration-300 ease-in-out" />
                 <motion.h2
                     className="text-5xl sm:text-6xl font-extrabold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
                     initial={{ opacity: 0, y: -30 }}
