@@ -6,7 +6,7 @@ export default function Contact() {
                 Feel free to reach out for collaborations or just a friendly hello 👋
             </p>
             <a
-                href="mailto:youremail@example.com"
+                href="mailto:support@dayro.co"
                 className="px-6 py-3 rounded-2xl bg-blue-600 text-white font-medium hover:bg-blue-700 transition"
             >
                 Say Hello
