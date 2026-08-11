@@ -166,6 +166,14 @@ export default function Projects() {
                                     </p>
                                 )}
 
+                                {
+                                    project.link && (
+                                        <Link to={project.link} className="underline" target="_blank" rel="noopener noreferrer">
+                                            View Project
+                                        </Link>
+                                    )
+                                }
+
                                 {project.image && (
                                     <button
                                         type="button"
@@ -174,13 +182,13 @@ export default function Projects() {
                                             setImage(project.image);
                                             setLiftPosition(0);
                                         }}
-                                        className="mt-4 inline-flex items-center rounded-md bg-gray-600 px-4 py-2 text-sm font-semibold text-white transition"
+                                        className="mt-4 ml-3 w-fit inline-flex items-center rounded-md bg-gray-600 px-4 py-2 text-sm font-semibold text-white transition"
                                     >
                                         Open
                                     </button>
                                 )}
 
-                                {project.link && (
+                                {project.prName === "dayro" && (
                                     <>
                                         <Link
                                             to={project.link}
