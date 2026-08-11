@@ -1,14 +1,33 @@
 [
     {
         "prName": "swiggy clone",
-        "image": "/images/image.png"
+        "image": "/images/image.png",
+        "link": "https://swiggy-clone-beryl-eight.vercel.app/",
+        "skills": [
+            "html",
+            "css"
+        ]
     },
     {
         "prName": "moving lift",
-        "image": "/images/Screenshot 2025-09-01 123208.png"
+        "image": "/images/Screenshot 2025-09-01 123208.png",
+        "skills": [
+            "html",
+            "css",
+            "javascript"
+        ]
     },
     {
         "prName": "dayro",
-        "link": "https://dayro.co/"
+        "link": "https://dayro.co/",
+        "skills": [
+            "javascript",
+            "react",
+            "nodejs",
+            "express",
+            "mongodb",
+            "react-frameworks",
+            "bullMq"
+        ]
     }
 ]

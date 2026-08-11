@@ -123,11 +123,33 @@ export default function Projects() {
                                 setLiftPosition(0);
                             }}
                         >
+                            {project.skills &&
+                                project.skills.length > 0 &&
+                                (
+                                    <div className="mt-3 flex flex-wrap gap-2">
+                                        {project.skills.map((skill, index) => (
+                                            <>
+                                                <span key={index} className="flex items-center gap-2
+                                rounded-full border border-gray-200
+                                bg-white px-4 py-2
+                                text-sm font-medium
+                                shadow-sm
+                                transition-all duration-200
+                                hover:-translate-y-1
+                                hover:border-gray-300
+                                hover:shadow-md" >
+                                                    {skill}
+                                                </span>
+                                            </>
+                                        ))}
+                                    </div>
+                                )
+                            }
                             {project.image && (
                                 <img
                                     src={project.image}
                                     alt={project.name || "Project"}
-                                    className="aspect-video w-full object-cover transition duration-300 group-hover:scale-105"
+                                    className="aspect-video w-full object-cover transition duration-300 group-hover:scale-95"
                                 />
                             )}
 
@@ -144,22 +166,45 @@ export default function Projects() {
                                     </p>
                                 )}
 
-                                {project.link && (
-                                    <Link
-                                        to={project.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        onClick={(e) => e.stopPropagation()}
+                                {project.image && (
+                                    <button
+                                        type="button"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setImage(project.image);
+                                            setLiftPosition(0);
+                                        }}
+                                        className="mt-4 inline-flex items-center rounded-md bg-gray-600 px-4 py-2 text-sm font-semibold text-white transition"
                                     >
-                                        <button
-                                            type="button"
-                                            className="mt-4 text-2xl font-medium hover:underline"
-                                        >
-                                            View Project
-                                        </button>
-                                    </Link>
+                                        Open
+                                    </button>
                                 )}
 
+                                {project.link && (
+                                    <>
+                                        <Link
+                                            to={project.link}
+                                            target="_blank"
+                                            className="mt-4 block text-2xl font-medium underline"
+                                            rel="noopener noreferrer"
+                                            onClick={(e) => e.stopPropagation()}
+                                        >
+                                            View dayro
+                                        </Link>
+                                        <span>-event planning website</span>
+                                        <p className="mt-4 max-w-full text-xl leading-6 text-gray-600 line-clamp-4">
+                                            This project is about creating meaningful and useful use cases for artists.
+
+                                            An app that lets anyone book their favourite artist for their occasion.
+
+                                            Artists can create their account on this app and get access to amazing
+                                            features built for artists to make their art accessible to more people.
+
+                                            Nobody believes right now, but it has to change the system of Gujarat
+                                            Dayro booking.
+                                        </p>
+                                    </>
+                                )}
                             </div>
                         </div>
                     ))}
@@ -180,7 +225,6 @@ export default function Projects() {
                 >
                     →
                 </button>
-
             </div>
 
             <div className="mt-2 flex items-center justify-center gap-2 text-sm text-gray-400 md:hidden">

@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import TechStack from "../components/TechStack";
 
 export default function Home() {
     return (
         <main className="min-h-[calc(100vh-5rem)]">
+            <div>
+                <TechStack />
+            </div>
             <section className="mx-auto flex min-h-[calc(100vh-5rem)] w-full max-w-7xl flex-col items-center justify-center gap-10 px-4 py-12 sm:px-6 md:flex-row md:gap-16 lg:px-8">
-
-                {/* Profile Image */}
                 <motion.div
                     className="w-full max-w-xs sm:max-w-sm md:w-1/2 md:max-w-md"
                     initial={{ opacity: 0, scale: 0.8 }}
@@ -23,7 +25,6 @@ export default function Home() {
 
                 {/* Content */}
                 <div className="flex w-full flex-col items-center text-center md:w-1/2 md:items-start md:text-left">
-
                     <motion.h1
                         className="text-4xl font-extrabold sm:text-5xl lg:text-6xl"
                         initial={{ opacity: 0, y: -30 }}
@@ -45,9 +46,19 @@ export default function Home() {
                         A Developer
                     </motion.h2>
 
-                    {/* CTA Button */}
+                    <motion.p
+                        className="mt-6 text-gray-700 sm:text-lg"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                    >
+                        i like to build something useful and try to make sense of what i do most of the time.
+                    </motion.p>
+
+
+
                     <motion.div
-                        className="mt-8"
+                        className="mt-6"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.5 }}
