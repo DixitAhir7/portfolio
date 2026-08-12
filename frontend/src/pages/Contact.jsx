@@ -12,7 +12,7 @@ export default function Contact() {
 
             <a
                 href="mailto:dixitahir0050@gmail.com"
-                className="inline-block rounded-xl bg-blue-600 px-6 py-3 text-sm font-medium text-white transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:px-8 sm:py-3 sm:text-base"
+                className="inline-block rounded-xl bg-gray-600 px-6 py-3 text-sm font-medium text-white transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:px-8 sm:py-3 sm:text-base"
             >
                 Say Hello
             </a>

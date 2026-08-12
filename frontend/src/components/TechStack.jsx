@@ -96,6 +96,7 @@ export default function TechStack() {
                                 opacity-0 translate-y-2
                                 group-hover:opacity-100
                                 group-hover:translate-y-0
+
                                 max-sm:pointer-events-none
                                 max-sm:group-hover:opacity-0
                                 max-sm:group-hover:translate-y-2
