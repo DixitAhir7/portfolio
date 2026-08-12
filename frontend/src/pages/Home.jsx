@@ -40,7 +40,7 @@ export default function Home() {
 
                     {/* Heading */}
 
-                    <div className="flex ml-4">
+                    <div className="flex ml-18">
                         <motion.h1
                             className="text-6xl font-black tracking-tight text-gray-900"
                             initial={{ opacity: 0, y: -30 }}
@@ -155,17 +155,6 @@ export default function Home() {
                             </div>
                         </div>
                     </motion.div>
-
-                    {/* Scroll indicator */}
-                    <motion.div
-                        className="mt-12 text-xs font-medium uppercase tracking-[0.2em] text-gray-400"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 1.2 }}
-                    >
-                        Scroll to explore
-                    </motion.div>
-
                 </div>
             </section>
         </main>
