@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import TechStack from "../components/TechStack";
 
 export default function Home() {
-    const resumePath = "/public/resume/dixit_bariya_resume.pdf";
+    const resumePath = "/resume/dixit_bariya_resume.pdf";
 
     return (
         <main className="min-h-[calc(100vh-5rem)] bg-white">
