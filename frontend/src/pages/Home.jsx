@@ -40,9 +40,9 @@ export default function Home() {
 
                     {/* Heading */}
 
-                    <div className="flex ml-18">
+                    <div className="flex flex-col items-start gap-2 ml-4 sm:ml-8 md:ml-18 sm:flex-row sm:items-baseline sm:gap-3">
                         <motion.h1
-                            className="text-6xl font-black tracking-tight text-gray-900"
+                            className="text-4xl font-black tracking-tight text-gray-900 sm:text-5xl md:text-6xl"
                             initial={{ opacity: 0, y: -30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7 }}
@@ -53,18 +53,15 @@ export default function Home() {
                             </span>
                         </motion.h1>
 
-                        {/* Role */}
                         <motion.h2
-                            className="mt-3 ml-3 text-2xl font-semibold text-gray-700 sm:text-3xl"
+                            className="text-xl font-semibold text-gray-700 sm:text-2xl md:text-3xl"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7, delay: 0.2 }}
                         >
-                            mern-Stack Developer
+                            MERN-Stack Developer
                         </motion.h2>
-
                     </div>
-
                     {/* Description */}
                     <motion.p
                         className="mx-auto mt-6 max-w-2xl text-base leading-7 text-gray-600 sm:text-lg sm:leading-8"

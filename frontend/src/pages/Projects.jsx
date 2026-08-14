@@ -12,7 +12,7 @@ export default function Projects() {
     const liftProjectImage = "/images/Screenshot 2025-09-01 123208.png";
 
     const isLiftProject = bigImage === liftProjectImage;
-
+    const [isSpeaking, setIsSpeaking] = useState(false);
     const speakFloor = (floorName) => {
         if ("speechSynthesis" in window) {
             window.speechSynthesis.cancel();
@@ -24,6 +24,10 @@ export default function Projects() {
             utterance.pitch = 1;
 
             window.speechSynthesis.speak(utterance);
+
+            if (window.speechSynthesis.speaking) {
+                setIsSpeaking(true);
+            }
         }
     };
 
@@ -36,7 +40,7 @@ export default function Projects() {
 
         setTimeout(() => {
             speakFloor(floorName);
-        }, 900);
+        }, 400);
     };
 
     const closeModal = () => {
@@ -168,8 +172,8 @@ export default function Projects() {
 
                                 {
                                     project.link && (
-                                        <Link to={project.link} className="underline" target="_blank" rel="noopener noreferrer">
-                                            View Project
+                                        <Link to={project.link} className="underline text-2xl" target="_blank" rel="noopener noreferrer">
+                                            {project.prName === "dayro" ? "View dayro" : "View Project"}
                                         </Link>
                                     )
                                 }
@@ -190,26 +194,20 @@ export default function Projects() {
 
                                 {project.prName === "dayro" && (
                                     <>
-                                        <Link
-                                            to={project.link}
-                                            target="_blank"
-                                            className="mt-4 block text-2xl font-medium underline"
-                                            rel="noopener noreferrer"
-                                            onClick={(e) => e.stopPropagation()}
-                                        >
-                                            View dayro
-                                        </Link>
                                         <span>-event planning website</span>
                                         <p className="mt-4 max-w-full text-xl leading-6 text-gray-600 line-clamp-4">
                                             This project is about creating meaningful and useful use cases for artists.
-
-                                            An app that lets anyone book their favourite artist for their occasion.
-
+                                            <br />
+                                            An app that lets anyone book their favourite artist for their event.
+                                            <br />
                                             Artists can create their account on this app and get access to amazing
-                                            features built for artists to make their art accessible to more people.
+                                            features built for artists.
+                                            <br />
+                                            <span className="font-bold mt-3">
 
-                                            Nobody believes right now, but it has to change the system of Gujarat
-                                            Dayro booking.
+                                                Nobody believes right now, but it has to change the system of Gujarat
+                                                Dayro booking.
+                                            </span>
                                         </p>
                                     </>
                                 )}

@@ -38,7 +38,7 @@ export default function Contact() {
             <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(251,146,60,0.12),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(59,130,246,0.12),_transparent_30%)]" />
 
             <div className="mx-auto max-w-6xl">
-                <div className="rounded-[2rem] border border-slate-200 bg-white/90 p-6 shadow-[0_30px_80px_-40px_rgba(15,23,42,0.4)] backdrop-blur-sm sm:p-8 lg:p-10">
+                <div className="rounded-[2rem] border border-slate-200 bg-white/90 p-6 backdrop-blur-sm sm:p-8 lg:p-10">
                     <div className="grid items-center gap-8 lg:grid-cols-[1.1fr_0.9fr]">
                         <div>
                             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-orange-200 bg-orange-50 px-3 py-1.5 text-sm font-medium text-orange-700">
@@ -98,18 +98,18 @@ export default function Contact() {
                             </div>
                         </div>
 
-                        <div className="rounded-[1.75rem] bg-slate-900 p-6 text-white shadow-[0_30px_80px_-30px_rgba(15,23,42,0.8)] sm:p-8">
+                        <div className="rounded-[1.75rem] bg-slate-900 p-6 text-white sm:p-8">
                             <div className="flex items-center justify-between gap-4">
                                 <div>
                                     <h2 className="mt-2 text-2xl font-bold">Open for work</h2>
                                 </div>
-                                <span className="inline-flex h-3 w-3 rounded-full bg-emerald-400 shadow-[0_0_14px_rgba(52,211,153,0.9)]" />
+                                <span className="inline-flex h-3 w-3 rounded-full bg-emerald-300" />
                             </div>
 
                             <div className="mt-8 space-y-5">
                                 <div className="rounded-2xl border border-slate-700 bg-slate-800/70 p-4">
                                     <p className="text-sm text-slate-400">Response time</p>
-                                    <p className="mt-1 text-lg font-semibold">Usually within 24 hours</p>
+                                    <p className="mt-1 text-lg font-semibold">within 24 hours</p>
                                 </div>
 
                                 <div className="rounded-2xl border border-slate-700 bg-slate-800/70 p-4">
