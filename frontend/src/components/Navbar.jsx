@@ -20,13 +20,13 @@ export default function Navbar() {
                         Dixit Ahir
                     </Link>
 
-                    <Link to="/" aria-label="Dixit Ahir profile">
+                    {/* <Link to="/" aria-label="Dixit Ahir profile">
                         <img
                             src="/images/WhatsApp Image 2025-07-12 at 22.02.01_418d642f.jpg"
                             alt="Dixit Ahir"
                             className="size-9 rounded-full object-cover shadow-md transition-all duration-200 hover:scale-105 hover:shadow-lg sm:h-11 sm:w-11"
                         />
-                    </Link>
+                    </Link> */}
                 </div>
 
                 {/* Navigation */}
